@@ -1,6 +1,0 @@
-@HortaManager.Presentation_HostAddress = http://localhost:5008
-
-GET {{HortaManager.Presentation_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
