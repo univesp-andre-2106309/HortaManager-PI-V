@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HortaManager.Domain\HortaManager.Domain.csproj" />
+    <ProjectReference Include="..\HortaManager.Infrastructure\HortaManager.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
