@@ -10,5 +10,7 @@ namespace HortaManager.Application.Queries
     {
         public DateTime InitialRange { get; init; }
         public DateTime LimitRange { get; init; }
+
+        public string arduinoCode { get; init; }
     }
 }

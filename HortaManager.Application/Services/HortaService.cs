@@ -45,12 +45,14 @@ namespace HortaManager.Application.Services
             return true;
         }
 
-        public async Task<List<HortaReportDTO>> GetReportsByDateRange(DateTime InitialRange, DateTime EndRange)
+        public async Task<List<HortaReportDTO>> GetReportsByDateRange(DateTime initialRange, DateTime endRange, string arduinoCode)
         {
             List<HortaReportDTO> reports = await this.mediator.getHortaReportsByRangeCaller().Handle(new GetHortaReportsByRangeQuery
             {
-                InitialRange = InitialRange,
-                LimitRange = EndRange
+                InitialRange = initialRange,
+                LimitRange = endRange,
+                arduinoCode = arduinoCode
+
             });
             return reports;
         }

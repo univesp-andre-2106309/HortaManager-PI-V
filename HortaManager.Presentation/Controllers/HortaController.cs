@@ -1,4 +1,5 @@
-﻿using HortaManager.Application.DTO.Requests;
+﻿using HortaManager.Application.DTO.Models;
+using HortaManager.Application.DTO.Requests;
 using HortaManager.Application.DTO.Responses;
 using HortaManager.Application.Services;
 using Microsoft.AspNetCore.Http;
@@ -35,6 +36,15 @@ namespace HortaManager.Application.Controllers
                 return BadRequest(ex.Message);
             }
             
+        }
+
+
+        [HttpGet("query")]
+        public async Task<IActionResult> GetHortaReports([FromQuery]DateTime startRange, DateTime endRange, string arduinoName = null)
+        {
+            List<HortaReportDTO> response = await this.hortaService.GetReportsByDateRange(startRange, endRange, arduinoName);
+            return Ok(new GetHortaReportsResponse { reports = response});
+
         }
 
     }

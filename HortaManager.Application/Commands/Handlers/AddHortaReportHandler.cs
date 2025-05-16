@@ -36,7 +36,6 @@ namespace HortaManager.Application.Commands.Handlers
 
             return new HortaReportDTO
             {
-                ArduinoScanHardwareId = report.ArduinoDevice.Id,
                 Date = DateTime.Now,
                 IsIrrigationActive = report.IsIrrigationActive,
                 SoilHumidity = report.SoilHumidity,
